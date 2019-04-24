@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t sahyun/docker-react -f Dockerfile.dev .
+
+scripts:
+  - docker run sahyun/docker-react npm run test -- --coverage

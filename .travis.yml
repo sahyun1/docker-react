@@ -5,5 +5,5 @@ services:
 before_install:
   - docker build -t sahyun/docker-react -f Dockerfile.dev .
 
-scripts:
+script:
   - docker run sahyun/docker-react npm run test -- --coverage
